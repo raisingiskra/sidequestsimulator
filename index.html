@@ -29,5 +29,23 @@
     <div class="titlediv">
     <img src="glitter-text 2.gif" style="width:100%; height:initial;" alt="Side Quest Generator!! Click the button, i know you want to :3">
     </div>
+       <button id="generateButton"><img src=“milkbutton.png” alt=“Click the button!”></button>
+    <script>
+        const texts = [
+            "Hello, world!",
+            "This is some random text.",
+            "Have a great day!",
+            "JavaScript is awesome!",
+            "You got a random message!"
+        ];
+
+        const button = document.getElementById("generateButton");
+        const output = document.getElementById("randomText");
+
+        button.addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            output.textContent = texts[randomIndex];
+        });
+    </script>
   </body>
 </html>
