@@ -1,53 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Super Cool Side Quests</title>
     <meta charset="UTF-8">
-    <html lang="en">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
       body {
-        background-color:#FFA7A6;
-        font-size:25px;
-        font-family:"Mountains of Christmas";
-        color:#FADA5E;
+        background-color: #FFA7A6;
+        font-size: 25px;
+        font-family: "Mountains of Christmas";
+        color: #FADA5E;
+        text-align: center;
       }
-      
+
       .titlediv {
         border: 12px solid orange;
-        margin:auto;
+        margin: auto;
         background-color: #FFF5C5;
-        padding:5px;
-        text-align:center;
-        border-radius:20px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      #generateButton {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      #generateButton img {
+        width: 200px;
       }
     </style>
   </head>
+
   <body>
+
     <div class="titlediv">
-    <img src="glitter-text 2.gif" style="width:100%; height:initial;" alt="Side Quest Generator!! Click the button, i know you want to :3">
+      <img src="glitter-text 2.gif"
+           style="width:100%; height:initial;"
+           alt="Side Quest Generator!! Click the button, i know you want to :3">
     </div>
-       <button id="generateButton">
-         <img src=“milkbutton.png” alt=“Click the button!”>
-       </button>
+
+    <button id="generateButton">
+      <img src="milkbutton.png" alt="Click the button!">
+    </button>
+
+    <p id="randomText">Your side quest will appear here!</p>
+
     <script>
-        const texts = [
-            "Hello, world!",
-            "This is some random text.",
-            "Have a great day!",
-            "JavaScript is awesome!",
-            "You got a random message!"
-        ];
+      const texts = [
+        "Eat a bag of Skittles but only the red ones!",
+        "Compliment a stranger!",
+        "Take a pair of socks and make them puppets! (Give them names!!)",
+        "Try a new food :3",
+        "idk man"
+      ];
 
-        const button = document.getElementById("generateButton");
-        const output = document.getElementById("randomText");
+      const button = document.getElementById("generateButton");
+      const output = document.getElementById("randomText");
 
-        button.addEventListener("click", function() {
-            const randomIndex = Math.floor(Math.random() * texts.length);
-            output.textContent = texts[randomIndex];
-        });
+      button.addEventListener("click", function() {
+        const randomIndex = Math.floor(Math.random() * texts.length);
+        output.textContent = texts[randomIndex];
+      });
     </script>
+
   </body>
 </html>
